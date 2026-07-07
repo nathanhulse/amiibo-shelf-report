@@ -1,0 +1,302 @@
+/* ============================================================
+   The Shelf Report — design tokens
+   Concept: a collector's ring-binder / catalog page.
+   Each entry has a punched "binder tab" colored by series,
+   a catalog number (like the number printed on an amiibo box),
+   and a card that looks like a sleeved binder page.
+   ============================================================ */
+
+:root {
+  --bg: #142226;           /* deep teal-navy, like a display-case backdrop */
+  --bg-soft: #1b2e33;
+  --paper: #f4eedd;        /* warm parchment card stock */
+  --paper-line: #e2d8bd;
+  --ink: #1b2020;
+  --ink-soft: #4b5555;
+  --cherry: #d6294a;       /* Mario-red */
+  --gold: #e8a33d;         /* accent / highlight */
+  --teal: #3fa796;         /* Splatoon/NFC teal */
+  --leaf: #4c8c5b;         /* Zelda green */
+  --sky: #3a7ca5;          /* Animal Crossing blue */
+  --plum: #8e5aa1;         /* Kirby/misc series */
+
+  --display: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(255,255,255,0.04), transparent 40%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px);
+  color: var(--paper);
+  font-family: var(--body);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Site header ---------- */
+
+.site-header {
+  padding: 56px 0 28px;
+  border-bottom: 1px solid rgba(244,238,221,0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand .ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 6px solid var(--gold);
+  flex: none;
+}
+
+.brand h1 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.1rem;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--paper);
+}
+
+.brand .tag {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid var(--gold);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.tagline {
+  margin: 10px 0 0;
+  color: rgba(244,238,221,0.65);
+  font-size: 1rem;
+  max-width: 46ch;
+}
+
+.site-nav {
+  margin-top: 22px;
+  display: flex;
+  gap: 22px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.site-nav a { color: rgba(244,238,221,0.75); border-bottom: 1px solid transparent; padding-bottom: 3px; }
+.site-nav a:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ---------- Binder grid (homepage) ---------- */
+
+.binder {
+  padding: 40px 0 80px;
+  display: grid;
+  gap: 22px;
+}
+
+.entry-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px -14px rgba(0,0,0,0.55);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.entry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 34px -14px rgba(0,0,0,0.6);
+}
+
+.entry-tab {
+  position: relative;
+  background: var(--series-color, var(--cherry));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry-tab::before, .entry-tab::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--bg);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset 0 0 0 3px rgba(0,0,0,0.08);
+}
+.entry-tab::before { top: 22px; }
+.entry-tab::after { bottom: 22px; }
+
+.entry-num {
+  font-family: var(--mono);
+  color: rgba(255,255,255,0.92);
+  font-size: 0.72rem;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.1em;
+}
+
+.entry-body { padding: 22px 26px 22px 22px; }
+
+.entry-series {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--series-color, var(--cherry));
+  font-weight: 600;
+}
+
+.entry-body h2 {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  margin: 6px 0 8px;
+  line-height: 1.25;
+}
+
+.entry-body p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+
+.entry-read {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  border-bottom: 2px solid var(--series-color, var(--cherry));
+}
+
+/* ---------- Post page ---------- */
+
+.post {
+  padding: 48px 0 90px;
+}
+
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.post h1 {
+  font-family: var(--display);
+  font-size: 2.3rem;
+  line-height: 1.15;
+  margin: 0 0 22px;
+  color: var(--paper);
+  max-width: 26ch;
+}
+
+.post-body {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 40px 44px;
+  box-shadow: 0 18px 40px -18px rgba(0,0,0,0.55);
+}
+
+.post-body h2 {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  margin: 32px 0 12px;
+  color: var(--ink);
+}
+.post-body h2:first-child { margin-top: 0; }
+
+.post-body p { margin: 0 0 16px; }
+.post-body ul { margin: 0 0 16px; padding-left: 22px; }
+.post-body li { margin-bottom: 8px; }
+
+.post-body strong { color: var(--cherry); }
+
+.disclosure-inline {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--paper-line);
+  border-bottom: 1px dashed var(--paper-line);
+  padding: 12px 0;
+  margin: 24px 0;
+}
+
+.cta-box {
+  margin: 28px 0 6px;
+  padding: 20px 22px;
+  background: rgba(214,41,74,0.07);
+  border: 1px solid rgba(214,41,74,0.25);
+  border-radius: 6px;
+}
+
+.cta-box .cta-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cherry);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cta-box a.cta-link {
+  color: var(--cherry);
+  font-weight: 700;
+  border-bottom: 2px solid var(--cherry);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 26px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--gold);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid rgba(244,238,221,0.12);
+  padding: 30px 0 60px;
+  font-size: 0.82rem;
+  color: rgba(244,238,221,0.55);
+}
+
+.site-footer p { max-width: 62ch; }
+
+@media (max-width: 600px) {
+  .brand h1 { font-size: 1.6rem; }
+  .post h1 { font-size: 1.7rem; }
+  .post-body { padding: 26px 22px; }
+  .entry-card { grid-template-columns: 46px 1fr; }
+}
