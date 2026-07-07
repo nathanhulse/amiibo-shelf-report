@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Shelf Report — Amiibo &amp; Nintendo Collector Notebook</title>
 <meta name="description" content="A collector&#x27;s notebook for Nintendo amiibo, unlocks, care guides, and launch news.">
+<meta property="og:title" content="The Shelf Report — Amiibo &amp; Nintendo Collector Notebook">
+<meta property="og:description" content="A collector&#x27;s notebook for Nintendo amiibo, unlocks, care guides, and launch news.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/hero-001.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -25,11 +31,25 @@
     </nav>
   </div>
 </header>
-<main class="binder">
-  <div class="wrap" style="display:grid;gap:22px;">
 
-    <a class="entry-card" href="posts/the-beginner-s-guide-to-amiibo-what-they-actually-do.html" style="--series-color:var(--gold)">
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Collector notebook</span>
+        <h2>Every amiibo unlock, catalogued.</h2>
+        <p>Guides on what each figure actually does, how to display and care for a collection, and how to spot a fake before you buy &mdash; written by a collector, for collectors.</p>
+      </div>
+      <img class="hero-art" src="assets/images/hero-001.svg" alt="" loading="lazy">
+    </div>
+  </section>
+<main class="binder">
+  <div class="wrap">
+    <div class="chip-row"><button class="chip is-active" data-filter="all">All entries</button><button class="chip" data-filter="general" style="--chip-color:var(--gold)">General</button><button class="chip" data-filter="zelda" style="--chip-color:var(--leaf)">Zelda</button><button class="chip" data-filter="splatoon" style="--chip-color:var(--teal)">Splatoon</button><button class="chip" data-filter="animal-crossing" style="--chip-color:var(--sky)">Animal Crossing</button><button class="chip" data-filter="collecting" style="--chip-color:var(--cherry)">Collecting</button><button class="chip" data-filter="history" style="--chip-color:var(--plum)">History</button><button class="chip" data-filter="mario" style="--chip-color:var(--cherry)">Mario</button><button class="chip" data-filter="kirby-party" style="--chip-color:var(--plum)">Kirby &amp; Party</button></div>
+    <div class="binder-grid">
+
+    <a class="entry-card pixel-corners" href="posts/the-beginner-s-guide-to-amiibo-what-they-actually-do.html" style="--series-color:var(--gold)" data-series="general">
       <div class="entry-tab"><span class="entry-num">NO.001</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-001.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">General</div>
         <h2>The Beginner&#x27;s Guide to Amiibo: What They Actually Do</h2>
@@ -37,8 +57,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/zelda-amiibo-explained-what-they-actually-unlock-in-botw-and-totk.html" style="--series-color:var(--leaf)">
+    <a class="entry-card pixel-corners" href="posts/zelda-amiibo-explained-what-they-actually-unlock-in-botw-and-totk.html" style="--series-color:var(--leaf)" data-series="zelda">
       <div class="entry-tab"><span class="entry-num">NO.002</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-002.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Zelda</div>
         <h2>Zelda Amiibo Explained: What They Actually Unlock in BOTW and TOTK</h2>
@@ -46,8 +67,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/splatoon-amiibo-how-the-gear-unlocks-actually-work.html" style="--series-color:var(--teal)">
+    <a class="entry-card pixel-corners" href="posts/splatoon-amiibo-how-the-gear-unlocks-actually-work.html" style="--series-color:var(--teal)" data-series="splatoon">
       <div class="entry-tab"><span class="entry-num">NO.003</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-003.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Splatoon</div>
         <h2>Splatoon Amiibo: How the Gear Unlocks Actually Work</h2>
@@ -55,8 +77,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/amiibo-cards-vs-amiibo-figures-what-s-actually-different.html" style="--series-color:var(--sky)">
+    <a class="entry-card pixel-corners" href="posts/amiibo-cards-vs-amiibo-figures-what-s-actually-different.html" style="--series-color:var(--sky)" data-series="animal-crossing">
       <div class="entry-tab"><span class="entry-num">NO.004</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-004.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Animal Crossing</div>
         <h2>Amiibo Cards vs. Amiibo Figures: What&#x27;s Actually Different</h2>
@@ -64,8 +87,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/how-to-display-your-amiibo-collection-without-wrecking-the-boxes.html" style="--series-color:var(--cherry)">
+    <a class="entry-card pixel-corners" href="posts/how-to-display-your-amiibo-collection-without-wrecking-the-boxes.html" style="--series-color:var(--cherry)" data-series="collecting">
       <div class="entry-tab"><span class="entry-num">NO.005</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-005.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Collecting</div>
         <h2>How to Display Your Amiibo Collection Without Wrecking the Boxes</h2>
@@ -73,8 +97,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/how-to-spot-a-bootleg-amiibo-before-you-buy.html" style="--series-color:var(--cherry)">
+    <a class="entry-card pixel-corners" href="posts/how-to-spot-a-bootleg-amiibo-before-you-buy.html" style="--series-color:var(--cherry)" data-series="collecting">
       <div class="entry-tab"><span class="entry-num">NO.006</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-006.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Collecting</div>
         <h2>How to Spot a Bootleg Amiibo Before You Buy</h2>
@@ -82,8 +107,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/the-history-of-amiibo-from-2014-launch-to-today-s-collector-market.html" style="--series-color:var(--plum)">
+    <a class="entry-card pixel-corners" href="posts/the-history-of-amiibo-from-2014-launch-to-today-s-collector-market.html" style="--series-color:var(--plum)" data-series="history">
       <div class="entry-tab"><span class="entry-num">NO.007</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-007.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">History</div>
         <h2>The History of Amiibo: From 2014 Launch to Today&#x27;s Collector Market</h2>
@@ -91,8 +117,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/best-amiibo-starter-picks-for-new-collectors-on-a-budget.html" style="--series-color:var(--cherry)">
+    <a class="entry-card pixel-corners" href="posts/best-amiibo-starter-picks-for-new-collectors-on-a-budget.html" style="--series-color:var(--cherry)" data-series="mario">
       <div class="entry-tab"><span class="entry-num">NO.008</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-008.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Mario</div>
         <h2>Best Amiibo Starter Picks for New Collectors on a Budget</h2>
@@ -100,8 +127,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/kirby-and-mario-party-amiibo-the-underrated-unlocks-worth-knowing.html" style="--series-color:var(--plum)">
+    <a class="entry-card pixel-corners" href="posts/kirby-and-mario-party-amiibo-the-underrated-unlocks-worth-knowing.html" style="--series-color:var(--plum)" data-series="kirby-party">
       <div class="entry-tab"><span class="entry-num">NO.009</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-009.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Kirby &amp; Party</div>
         <h2>Kirby and Mario Party Amiibo: The Underrated Unlocks Worth Knowing</h2>
@@ -109,8 +137,9 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
-    <a class="entry-card" href="posts/amiibo-care-101-cleaning-storage-and-protecting-the-nfc-chip.html" style="--series-color:var(--cherry)">
+    <a class="entry-card pixel-corners" href="posts/amiibo-care-101-cleaning-storage-and-protecting-the-nfc-chip.html" style="--series-color:var(--cherry)" data-series="collecting">
       <div class="entry-tab"><span class="entry-num">NO.010</span></div>
+      <div class="entry-thumb"><img src="assets/images/thumb-010.svg" alt="" loading="lazy"></div>
       <div class="entry-body">
         <div class="entry-series">Collecting</div>
         <h2>Amiibo Care 101: Cleaning, Storage, and Protecting the NFC Chip</h2>
@@ -118,6 +147,7 @@
         <span class="entry-read">Read entry &rarr;</span>
       </div>
     </a>
+    </div>
   </div>
 </main>
 <footer class="site-footer">
@@ -125,5 +155,18 @@
     <p>The Shelf Report is an independent fan-run collector's blog and is not affiliated with, sponsored by, or endorsed by Nintendo. Amiibo, Nintendo Switch, and related marks are trademarks of Nintendo. As an Amazon Associate, this site earns from qualifying purchases &mdash; see the About page for full disclosure.</p>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.chip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    document.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('is-active'); });
+    chip.classList.add('is-active');
+    var f = chip.getAttribute('data-filter');
+    document.querySelectorAll('.entry-card').forEach(function(card){
+      card.style.display = (f === 'all' || card.getAttribute('data-series') === f) ? '' : 'none';
+    });
+  });
+});
+</script>
 </body>
 </html>

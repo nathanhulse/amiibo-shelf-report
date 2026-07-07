@@ -1,0 +1,44 @@
+<svg width="1200" height="640" viewBox="0 0 1200 640" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="640" fill="#142226"/>
+  <defs>
+    <pattern id="dots-4c8c5b" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#4c8c5b" opacity="0.35"/>
+    </pattern>
+    <radialGradient id="glow-4c8c5b" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#4c8c5b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#142226" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="640" fill="url(#dots-4c8c5b)"/>
+  <rect width="1200" height="640" fill="url(#glow-4c8c5b)"/>
+
+  <!-- pixel corner brackets, matching site branding -->
+  <g fill="#4c8c5b">
+    <path d="M40,40 h60 v16 h-44 v44 h-16 Z"/>
+    <path d="M1160,40 h-60 v16 h44 v44 h16 Z"/>
+    <path d="M40,600 h60 v-16 h-44 v-44 h-16 Z"/>
+    <path d="M1160,600 h-60 v-16 h44 v-44 h16 Z"/>
+  </g>
+
+  <!-- hex plinth -->
+  <polygon points="600,470 690,510 690,590 600,630 510,590 510,510" fill="#f4eedd" stroke="#4c8c5b" stroke-width="6"/>
+
+  <!-- generic faceless collectible-figure silhouette (no specific character) -->
+  <g>
+    <ellipse cx="600" cy="500" rx="86" ry="20" fill="#142226" opacity="0.35"/>
+    <path d="M540,500 C540,430 560,380 600,380 C640,380 660,430 660,500 Z" fill="#4c8c5b"/>
+    <circle cx="600" cy="320" r="62" fill="#4c8c5b"/>
+    <rect x="560" y="260" width="80" height="34" rx="14" fill="#4c8c5b"/>
+    <circle cx="600" cy="320" r="62" fill="none" stroke="#f4eedd" stroke-width="4" opacity="0.4"/>
+  </g>
+
+  <!-- floating pixel accents -->
+  <g fill="#4c8c5b" opacity="0.8">
+    <rect x="180" y="140" width="14" height="14"/>
+    <rect x="200" y="140" width="14" height="14"/>
+    <rect x="180" y="160" width="14" height="14"/>
+    <rect x="990" y="460" width="14" height="14"/>
+    <rect x="1010" y="460" width="14" height="14"/>
+    <rect x="1010" y="480" width="14" height="14"/>
+  </g>
+</svg>
